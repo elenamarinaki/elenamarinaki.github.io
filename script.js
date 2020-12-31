@@ -2,6 +2,7 @@ const MUSIC_LIST = document.querySelector(".music-list a");
 const WEB_LIST = document.querySelector(".web-list a");
 const WORK_LIST = document.querySelector(".work-list a");
 const EDU_LIST = document.querySelector(".edu-list a");
+const FC_LIST = document.querySelector(".fc-list a");
 
 
 const TITLES = document.querySelector(".titles");
@@ -11,6 +12,7 @@ const MUSIC = document.querySelector(".music");
 const WEB = document.querySelector(".web");
 const WORK = document.querySelector(".work");
 const EDU = document.querySelector(".edu");
+const FC = document.querySelector(".fc");
 
 const AVATAR = document.querySelector(".avatar");
 const NAV_BAR = document.querySelector(".navigation");
@@ -63,6 +65,10 @@ function reveal(section) {
     if (RESUME.classList.length == 1) {
       RESUME.classList.toggle("hide");
     }
+    if (FC.classList.length == 1) {
+      FC.classList.toggle("hide");
+      FC_LIST.style.textDecoration = "none";
+    }
 
     BIG_DOT.style.display = "none";
     TITLES.classList.add("titles_small");
@@ -93,6 +99,11 @@ function reveal(section) {
     if (RESUME.classList.length == 1) {
       RESUME.classList.toggle("hide");
     }
+    if (FC.classList.length == 1) {
+      FC.classList.toggle("hide");
+      FC_LIST.style.textDecoration = "none";
+    }
+
 
     BIG_DOT.style.display = "none";
     TITLES.classList.add("titles_small");
@@ -122,6 +133,10 @@ function reveal(section) {
     }
     if (RESUME.classList.length == 1) {
       RESUME.classList.toggle("hide");
+    }
+    if (FC.classList.length == 1) {
+      FC.classList.toggle("hide");
+      FC_LIST.style.textDecoration = "none";
     }
 
     BIG_DOT.style.display = "none";
@@ -153,6 +168,44 @@ function reveal(section) {
     if (RESUME.classList.length == 1) {
       RESUME.classList.toggle("hide");
     }
+    if (FC.classList.length == 1) {
+      FC.classList.toggle("hide");
+      FC_LIST.style.textDecoration = "none";
+    }
+
+    BIG_DOT.style.display = "none";
+    TITLES.classList.add("titles_small");
+
+    AVATAR.classList.remove("avatar_big");
+    AVATAR.classList.add("avatar_small");
+
+    NAV_BAR.classList.remove("nav_bar");
+    NAV_BAR.classList.add("nav_bar_small");
+    revealed = true;
+  }
+  else if (section == 5) {  //---------> FOUNDERS & CODERS
+    FC.classList.toggle("hide");
+    FC_LIST.style.textDecoration = "underline double #fda403";
+
+    if (WORK.classList.length == 1) {
+      WORK.classList.toggle("hide");
+      WORK_LIST.style.textDecoration = "none";
+    }
+    if (WEB.classList.length == 1) {
+      WEB.classList.toggle("hide");
+      WEB_LIST.style.textDecoration = "none";
+    }
+    if (MUSIC.classList.length == 1) {
+      MUSIC.classList.toggle("hide");
+      MUSIC_LIST.style.textDecoration = "none";
+    }
+    if (RESUME.classList.length == 1) {
+      RESUME.classList.toggle("hide");
+    }
+    if (EDU.classList.length == 1) {
+      EDU.classList.toggle("hide");
+      EDU_LIST.style.textDecoration = "none";
+    }
 
     BIG_DOT.style.display = "none";
     TITLES.classList.add("titles_small");
@@ -165,9 +218,10 @@ function reveal(section) {
     revealed = true;
   }
 
+
   footBar();
   
-  if ((MUSIC.classList.length == 2) && (WEB.classList.length == 2) && (WORK.classList.length == 2) && (EDU.classList.length == 2)){
+  if ((MUSIC.classList.length == 2) && (WEB.classList.length == 2) && (WORK.classList.length == 2) && (EDU.classList.length == 2) && (FC.classList.length == 2)){
     RESUME.classList.toggle("hide");
     revealed = false;
 
@@ -179,6 +233,7 @@ function reveal(section) {
     WEB_LIST.style.textDecoration = "none";
     WORK_LIST.style.textDecoration = "none";
     EDU_LIST.style.textDecoration = "none";
+    FC_LIST.style.textDecoration = "none";
 
     BIG_DOT.style.display = "inline-block";
     TITLES.classList.remove("titles_small");
@@ -207,7 +262,7 @@ function footBar() {
 // --------------------------------------------------> INIT
 function init() {
 
-  if ((MUSIC.classList.length == 1) || (WEB.classList.length == 1) || (WORK.classList.length == 1) || (EDU.classList.length == 1)) {
+  if ((MUSIC.classList.length == 1) || (WEB.classList.length == 1) || (WORK.classList.length == 1) || (EDU.classList.length == 1) || (FC.classList.length == 1)) {
     RESUME.classList.toggle("hide");
     revealed = false;
 
@@ -224,12 +279,16 @@ function init() {
     else if (EDU.classList.length == 1) {
       EDU.classList.toggle("hide");
     }
+    else if (FC.classList.length == 1) {
+      FC.classList.toggle("hide");
+    }
 
 
     MUSIC_LIST.style.textDecoration = "none";
     WEB_LIST.style.textDecoration = "none";
     WORK_LIST.style.textDecoration = "none";
     EDU_LIST.style.textDecoration = "none";
+    FC_LIST.style.textDecoration = "none";
 
     BIG_DOT.style.display = "inline-block";
     TITLES.classList.remove("titles_small");
@@ -270,6 +329,7 @@ MUSIC_LIST.addEventListener('click', function(){reveal(1);}, false);
 WEB_LIST.addEventListener('click', function(){reveal(2);}, false);
 WORK_LIST.addEventListener('click', function(){reveal(3);}, false);
 EDU_LIST.addEventListener('click', function(){reveal(4);}, false);
+FC_LIST.addEventListener('click', function(){reveal(5);}, false);
 
 AVATAR.addEventListener('click', init, false);
 BIG_DOT.addEventListener('click', footBar, false);

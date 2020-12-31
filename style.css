@@ -439,6 +439,64 @@ ul {
 
 
 
+  /* ------------------------ FOUNDERS & CODERS SECTION ------------------------ */
+  .fc {
+  background-color: #212121;
+
+  margin: 0;
+  padding: 0;
+}
+
+.fc h3 {
+  /* display: block; */
+  color: #b02533;
+  margin: 0;
+  padding: 2px;
+
+  text-align: center;
+  font-size: 17px;
+}
+
+.fc_item p {
+  /* font-family: 'Raleway', sans-serif; */
+  margin: 0;
+  padding: 2px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.fc_item img {
+  width: 200px;
+  box-shadow: 5px 5px 10px 0px rgba(47, 47, 47, 0.3);
+}
+
+.fc_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 15px;
+
+
+  background-color: #212121;
+  text-align: center;
+}
+
+.fc_item {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 30px;
+}
+
 
 
                                /* ------------------------ HIDING ------------------------ */
