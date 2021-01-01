@@ -474,7 +474,7 @@ ul {
 }
 
 .fc_box {
-  display: flex;
+  display: block;
   flex-direction: row;
   flex-wrap: wrap;
   /* align-items: center; */
