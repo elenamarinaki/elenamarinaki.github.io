@@ -497,6 +497,10 @@ ul {
   padding: 10px 30px;
 }
 
+.fc_links {
+  display: block;
+  padding: 50px;
+}
 
 
                                /* ------------------------ HIDING ------------------------ */
