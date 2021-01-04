@@ -458,13 +458,13 @@ ul {
 }
 
 .fc_item p {
-  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 2px;
   padding-bottom: 10px;
 
-  text-align: center;
-  font-size: 13px;
+  text-align: justify;
+  font-size: 15px;
   font-weight: lighter;
 }
 
@@ -475,7 +475,7 @@ ul {
 
 .fc_box {
   display: block;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   /* align-items: center; */
   justify-content: center;
@@ -493,13 +493,30 @@ ul {
 .fc_item {
   box-sizing: border-box;
 
-  margin: 0;
+  margin: auto;
+  width: 80%;
   padding: 10px 30px;
 }
 
 .fc_links {
   display: block;
+
+  margin: auto;
   padding: 50px;
+
+  font-size: 21px;
+}
+
+.join_fc {
+
+  /* display: block; */
+  /* margin: 0;
+  width: 80%; */
+
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-size: 20px; */
+  text-align: justify !important;
+
 }
 
 
