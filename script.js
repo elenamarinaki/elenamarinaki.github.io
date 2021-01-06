@@ -1,5 +1,6 @@
 const MUSIC_LIST = document.querySelector(".music-list a");
 const WEB_LIST = document.querySelector(".web-list a");
+const WEB_LIST_2 = document.querySelector(".web-list-2 a");
 const WORK_LIST = document.querySelector(".work-list a");
 const EDU_LIST = document.querySelector(".edu-list a");
 const FC_LIST = document.querySelector(".fc-list a");
@@ -327,6 +328,7 @@ function subMenuE(sub_section) {
 // MUSIC_LIST.addEventListener('click', press, false);
 MUSIC_LIST.addEventListener('click', function(){reveal(1);}, false);
 WEB_LIST.addEventListener('click', function(){reveal(2);}, false);
+WEB_LIST_2.addEventListener('click', function(){reveal(2);}, false);
 WORK_LIST.addEventListener('click', function(){reveal(3);}, false);
 EDU_LIST.addEventListener('click', function(){reveal(4);}, false);
 FC_LIST.addEventListener('click', function(){reveal(5);}, false);
