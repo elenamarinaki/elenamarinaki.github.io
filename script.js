@@ -402,32 +402,36 @@ function subMenuE(sub_section) {
 
 
 var slideIndex = 1;
+// show 1st image when going to the GALLERY
 showSlides(slideIndex);
 
-// Next/previous controls
+// next / previous
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("images");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  var SLIDES = document.getElementsByClassName("images");
+  var DOTS = document.getElementsByClassName("dot");
+
+  // reseting the number of slides to cycle through
+  if (n > SLIDES.length) {
+    slideIndex = 1;
+  } else if (n < 1) {
+    slideIndex = SLIDES.length;
+  } else {
+    slideIndex = n;
+  } 
+
+  for (i = 0; i < SLIDES.length, i < DOTS.length; i++) {
+      SLIDES[i].style.display = "none";
+      DOTS[i].className = DOTS[i].className.replace(" active", "");
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  SLIDES[slideIndex-1].style.display = "block";
+  DOTS[slideIndex-1].className += " active";
 }
 
 
