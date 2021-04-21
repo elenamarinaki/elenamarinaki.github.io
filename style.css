@@ -314,10 +314,10 @@ ul {
   transition: transform 0.4s ease;
 }                     
 
-.work_item div {
-  /* flex-basis: 200px; */
-  /* flex-grow: 1; */
-}
+/* .work_item div {
+  flex-basis: 200px;
+  flex-grow: 1;
+} */
 
 .work_item div:nth-of-type(1) {
   /* flex-shrink: 1; */
