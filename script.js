@@ -30,6 +30,8 @@ const WORK_DES_3 = document.querySelector(".work_description_3");
 const WORK_DES_4 = document.querySelector(".work_description_4");
 const WORK_DES_5 = document.querySelector(".work_description_5");
 
+const WORK_ITEMS = document.querySelectorAll('.work_item');
+
 
 const EDU_DES_1 = document.querySelector(".edu_description_1");
 const EDU_DES_2 = document.querySelector(".edu_description_2");
@@ -394,7 +396,26 @@ function subMenuE(sub_section) {
 }
 
 
+// ----------------------------------------------------> REVEAL WORK ITEMS LIST
 
+// fire an event when we scroll
+window.addEventListener('scroll', reavealWorkItems);
+
+reavealWorkItems();
+
+function reavealWorkItems() {
+  const triggerBottom = window.innerHeight / 4 * 3;
+
+  WORK_ITEMS.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggerBottom) {
+      item.classList.add('show');
+    } else {
+      item.classList.remove('show');
+    }
+  })
+}
 
 
 // ----------------------------------------------------> GALLERY CAROUSEL
