@@ -404,6 +404,7 @@ window.addEventListener('scroll', reavealWorkItems);
 reavealWorkItems();
 
 function reavealWorkItems() {
+  // ratio after which the panel is triggered to appear
   const triggerBottom = window.innerHeight / 4 * 3;
 
   WORK_ITEMS.forEach(item => {
