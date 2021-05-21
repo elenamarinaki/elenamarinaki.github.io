@@ -423,38 +423,51 @@ function reavealWorkItems() {
 
 
 
-var slideIndex = 1;
-// show 1st image when going to the GALLERY
-showSlides(slideIndex);
+const imgs = document.getElementById('imgs');
+const leftBtn = document.getElementById('left');
+const rightBtn = document.getElementById('right');
 
-// next / previous
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+const img = document.querySelectorAll('#imgs img');
+
+let idx = 0;
+
+let interval = setInterval(run, 2000);
+
+function run() {
+    idx++;
+
+    changeImage();
 }
 
+function changeImage() {
+    // the *img* is the list of images we have in the image-container
+    if(idx > img.length - 1) {
+        idx = 0;
+    } else if (idx < 0 ) {
+        idx = img.length - 1;
+    }
 
-function showSlides(n) {
-  var i;
-  var SLIDES = document.getElementsByClassName("images");
-  var DOTS = document.getElementsByClassName("dot");
-
-  // reseting the number of slides to cycle through
-  if (n > SLIDES.length) {
-    slideIndex = 1;
-  } else if (n < 1) {
-    slideIndex = SLIDES.length;
-  } else {
-    slideIndex = n;
-  } 
-
-  for (i = 0; i < SLIDES.length, i < DOTS.length; i++) {
-      SLIDES[i].style.display = "none";
-      DOTS[i].className = DOTS[i].className.replace(" active", "");
-  }
-
-  SLIDES[slideIndex-1].style.display = "block";
-  DOTS[slideIndex-1].className += " active";
+    imgs.style.transform = `translateX(${-idx * 500}px)`;
 }
+
+function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(run, 2000);
+}
+
+leftBtn.addEventListener('click', () => {
+    idx--;
+
+    changeImage();
+    resetInterval();
+})
+
+rightBtn.addEventListener('click', () => {
+    idx++;
+
+    changeImage();
+    resetInterval();
+})
 
 
 
