@@ -200,37 +200,11 @@ ul {
   padding: 0;
 }
 
-.web h3 {
-  /* display: block; */
-  color: #b02533;
-  margin: 0;
-  padding: 2px;
-
-  text-align: center;
-  font-size: 17px;
-}
-
-.web_item p {
-  /* font-family: 'Raleway', sans-serif; */
-  margin: 0;
-  padding: 2px;
-  padding-bottom: 10px;
-
-  text-align: center;
-  font-size: 13px;
-  font-weight: lighter;
-}
-
-.web_item img {
-  width: 200px;
-  box-shadow: 5px 5px 10px 0px rgba(47, 47, 47, 0.3);
-}
-
 .web_box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
 
   width: 100%;
@@ -244,11 +218,54 @@ ul {
 }
 
 .web_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   box-sizing: border-box;
+  background-color: #1c1c1c;
+
+  width: 700px;
+  height: 200px;
+
+  margin: 7px;
+  padding: 10px 30px;
+  border-radius: 10px;
+
+
+
+}
+
+
+.web_item h3 {
+  color: #b02533;
+  margin: 0;
+  padding: 2px;
+
+  text-align: center;
+  font-size: 17px;
+}
+
+.web_item p {
+  /* font-family: 'Raleway', sans-serif; */
+  color: #fda403;
 
   margin: 0;
-  padding: 10px 30px;
+  padding: 2px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  font-size: 13px;
+  font-weight: lighter;
 }
+
+.web_item img {
+  display: block;
+  width: 200px;
+  box-shadow: 5px 5px 10px 0px rgba(47, 47, 47, 0.3);
+}
+
 
 
                                /* ------------------------ WORK SECTION ------------------------ */
