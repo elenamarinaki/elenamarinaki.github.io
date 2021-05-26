@@ -8,28 +8,28 @@ No external libraries have been used.
 
 
 GENERAL NOTE
-============
+------------
 The website is implemented in one single page and the user can access different tabs *(Music, Web-Projects, Work, Education, Founders & Coders, Gallery)* by clicking on the respective links. This functionality is implemented with javascript, by manipulating DOM elements, hiding and revealing them depending on the element clicked.
 
 
 **RECENT UPDATES - CHANGES** 
 
 WEB-PROJECTS TAB
-================
+----------------
 The items are presented more clearly on the page, in different boxes and in flex display with `flex-direction: column;`, so they appear vertically.
 
 WORK TAB
-========
+--------
 I changed how each job title is presented visually. Every item is enclosed in a box and the items are entering the page gradually, as the user is scrolling down.
 I have added media queries for smaller screen sizes, so that the width is adapted, as well as the text size.
 
 FOUNDERS & CODERS TAB
-=====================
+---------------------
 The CSS of the tab has been quite changed. The main text has been enclosed in a box, as have the yellow links that lead to my different pages. I find it easier to focus on each item this way, as the elements are more visually structured.
 I have added media queries for smaller screen sizes, so that the links appear below the text in mobile, instead of side by side as in desktop.
 
 GALLERY TAB
-===========
+-----------
 I have changed the gallery type from simple scrolling through the images to actual carousel. Now the images are changing automatically, but the user can also interact with the `prev - next` buttons. All images are from *https://unsplash.com/*.
 
 
