@@ -701,3 +701,29 @@ ul {
 .foot img {
   width: 35px;
 }
+
+
+                               /* ------------------------ MEDIA QUERIES  ------------------------ */
+
+
+@media only screen and (max-width: 600px) {
+
+                                /* ------------------------ F&C  ------------------------ */
+  .fc_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+ 
+ 
+  .fc_item {
+  width: 100%;
+ }
+
+ .fc_links {
+  width: 40%;
+  font-size: 12px;
+ }
+}
