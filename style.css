@@ -708,7 +708,8 @@ ul {
 
 @media only screen and (max-width: 600px) {
 
-                                /* ------------------------ F&C  ------------------------ */
+
+                                /* ------------------------ F&C SECTION ------------------------ */
   .fc_box {
     display: flex;
     flex-direction: column;
@@ -727,4 +728,35 @@ ul {
   font-size: 12px;
  }
 
+}
+
+@media only screen and (max-width: 820px) {
+
+                                      /* ------------------------ WORK SECTION ------------------------ */
+
+  .work_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 95%;
+  height: 100%;
+  text-align: center;
+}
+
+.work_item h3 {
+  font-size: 14px;
+}
+
+.work_item p {
+  font-size: 13px;
+}
+
+.work_item ul li {
+  width: 73%;
+
+  font-size: 12px;
+  text-align: left;
+}
 }
