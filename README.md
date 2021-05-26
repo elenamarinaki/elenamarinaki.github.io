@@ -8,11 +8,12 @@ No external libraries have been used.
 
 
 GENERAL NOTE
-------------
+============
 The website is implemented in one single page and the user can access different tabs *(Music, Web-Projects, Work, Education, Founders & Coders, Gallery)* by clicking on the respective links. This functionality is implemented with javascript, by manipulating DOM elements, hiding and revealing them depending on the element clicked.
 
 
-**RECENT UPDATES - CHANGES** 
+**RECENT UPDATES - CHANGES**
+============================ 
 
 WEB-PROJECTS TAB
 ----------------
@@ -34,6 +35,7 @@ I have changed the gallery type from simple scrolling through the images to actu
 
 
 **UNFINISHED - TASKS**
+======================
 
 1. If I had more time, I would have worked more on making the website more mobile friendly. In the last updates I have added media queries for the sections that I felt were not well presented in smaller screens, but more sections (e.g. the _Education_ tab) could benefit from more work to make the information easily accesible.
 
